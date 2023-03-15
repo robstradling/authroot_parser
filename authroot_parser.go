@@ -154,8 +154,8 @@ func main() {
 				case "1.3.6.1.4.1.311.10.11.104": fmt.Printf("CERT_DISALLOWED_FILETIME_PROP_ID: %s", msFiletime(attribute.Value.Data))
 				case "1.3.6.1.4.1.311.10.11.105": fmt.Printf("CERT_ROOT_PROGRAM_CHAIN_POLICIES_PROP_ID:%s", oidList(attribute.Value.Data))
 				case "1.3.6.1.4.1.311.10.11.122": fmt.Printf("DISALLOWED_ENHKEY_USAGE:%s", oidList(attribute.Value.Data))
-				case "1.3.6.1.4.1.311.10.11.126": fmt.Printf("NotBefore?: %s", msFiletime(attribute.Value.Data))
-				case "1.3.6.1.4.1.311.10.11.127": fmt.Printf("NotBefore'd OIDs?:%s", oidList(attribute.Value.Data))
+				case "1.3.6.1.4.1.311.10.11.126": fmt.Printf("NotBefore: %s", msFiletime(attribute.Value.Data))
+				case "1.3.6.1.4.1.311.10.11.127": fmt.Printf("NotBefore'd OIDs:%s", oidList(attribute.Value.Data))
 				default: panic(fmt.Errorf("%s: UNEXPECTED!", attribute.Type.String()))
 			}
 			fmt.Printf("\n")
